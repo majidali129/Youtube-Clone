@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 
 import Header from "./components/Header";
@@ -6,7 +6,6 @@ import { AppContext } from "./context/contextApi";
 import Feed from './components/Feed'
 import SearchResult from './components/SearchResult'
 import VideoDetails from './components/VideoDetails'
-import Loader from "./shared/Loader";
 
 
 

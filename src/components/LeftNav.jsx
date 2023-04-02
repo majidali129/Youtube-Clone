@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 const LeftNav = () => {
   
-  const {selectCategories, setSelectCategories, mobileMeny} = useContext(Context)
+  const {selectCategories, setSelectCategories, mobileMenu} = useContext(Context)
 
   const navigate = useNavigate()
 
@@ -25,7 +25,7 @@ const LeftNav = () => {
   }
 
   return (
-    <div className='  md:block w-[245px] overflow-y-auto h-[90vh] py-4  bg-black absolute md:relative z-10 translate-x-[-240] md:translate-x-0 transition-all '>
+    <div className= {`absolute w-[245px]  overflow-y-auto h-full md:relative py-4  bg-black  z-10 translate-x-[-240px] md:translate-x-0 transition-all ${mobileMenu ? "translate-x-[0]" : ""}`} >
       <div className='flex flex-col px-4'>
         {
           categories.map(item=>{

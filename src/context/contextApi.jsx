@@ -7,7 +7,7 @@ export const Context = createContext();
 export const AppContext = (props)=>{
     const [loading, setLoading] = useState(false);
     const [searchResults, setSearchResults] = useState(false);
-    const [selectCategories, setSelectCategories] = useState('Latest');
+    const [selectCategories, setSelectCategories] = useState('Islamic');
     const [mobileMenu, setMobileMenu] = useState(false);
 
 
@@ -19,7 +19,7 @@ export const AppContext = (props)=>{
     const fetchSelectodCategoryData = (query)=>{
         setLoading(true);
         fetchYoutubeData(`search/?q=${query}`).then(({contents})=>{
-            console.log(contents )
+            // console.log(contents )
             setSearchResults(contents);
             setLoading(false)
         })}
